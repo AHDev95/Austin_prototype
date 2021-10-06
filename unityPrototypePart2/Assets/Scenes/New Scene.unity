@@ -640,7 +640,11 @@ MonoBehaviour:
   - {fileID: 7040892817396354549, guid: 332fd7e8da19db04b8635087ed2a6ffd, type: 3}
   - {fileID: 1037876616319534144, guid: 6bbf65ffa04f36543924c7a811a8c1e1, type: 3}
   - {fileID: 5655994274948893621, guid: 503ffcd6080f33e4aa1a0f38fa9c02f8, type: 3}
-  recipe: []
+  recipe:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  identity: 0
 --- !u!4 &693705770
 Transform:
   m_ObjectHideFlags: 0

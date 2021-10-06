@@ -10,8 +10,9 @@ public GameObject prefab;    // This works
     {
       
 
-Instantiate(prefab,transform);
-}
+      Instantiate(prefab,transform);
+    
+    }
 
   
 }
