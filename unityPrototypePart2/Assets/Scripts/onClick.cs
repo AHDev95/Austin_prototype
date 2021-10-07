@@ -5,24 +5,26 @@ using UnityEngine;
 public class onClick : MonoBehaviour
 {
     private CapsuleCollider capsuleCollider;
+    guessManager GuessScript;
 
-    GameObject[] guess;
-    GameObject[] selected;
+    
     //public int identity;
-    private void Awake()
+    private void Start()
     {
-        capsuleCollider = GetComponent<CapsuleCollider>();
+       
+        GuessScript = GameObject.Find("guesslog").GetComponent<guessManager>();
+        
+
+
     }
 
     void OnMouseDown()
     {
-        guess = GameObject.FindGameObjectsWithTag("staticSpawn");
-        for (int i = 0; i < guess.Length; i++)
-        {
-            //GameObject clicked = get
-           // selected[i] = 
-        }
-       // capsuleCollider.CompareTag();
+
+        gameObject.GetComponent<GameObject>();
+        GuessScript.guess[GuessScript.count] = gameObject.GetComponent<GameObject>();
+        GuessScript.count++;
+
 
     }
 
