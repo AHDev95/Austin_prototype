@@ -8,7 +8,7 @@ public class randSpawnManager : MonoBehaviour
     [SerializeField]
     GameObject[] objectPreFab;
    public GameObject[] recipe;
-    public int identity;
+   //public int identity;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,24 +19,28 @@ public class randSpawnManager : MonoBehaviour
 
             recipe[a] = spawnObj;
             }
-        foreach (GameObject spawn in spawnPoints)
+
+               print(recipe);
+
+
+       /* foreach (GameObject spawn in spawnPoints)
         {
             
             //spawnObj.GetComponent<onClick>().identity = i;
             
             
 
-            /*for (int i = 0; i>=3; i = i++)
+            for (int i = 0; i>=3; i = i++)
             {
                 recipe[i] = spawnObj;
 
 
                 
             }*/
-            print(recipe);
-
+            
+       
              
-        }
+        
     }
 
    
