@@ -7,26 +7,24 @@ public class onClick : MonoBehaviour
     private CapsuleCollider capsuleCollider;
     guessManager GuessScript;
 
-    
+
     //public int identity;
     private void Start()
     {
-       
+
         GuessScript = GameObject.Find("guesslog").GetComponent<guessManager>();
-        
 
         
+
     }
 
     void OnMouseDown()
     {
 
-        gameObject.GetComponent<GameObject>();
-        GuessScript.guess[GuessScript.count] = gameObject.GetComponent<GameObject>();
+        //gameObject.GetComponent<GameObject>();
+        GuessScript.guess[GuessScript.count] = gameObject;
         GuessScript.count++;
 
 
     }
-
-   
 }
