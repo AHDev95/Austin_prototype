@@ -6,6 +6,12 @@ TagManager:
   tags:
   - SpawnPoints
   - staticSpawn
+  - blue
+  - green
+  - orange
+  - purple
+  - red
+  - yellow
   layers:
   - Default
   - TransparentFX

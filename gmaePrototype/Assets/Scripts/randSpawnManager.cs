@@ -20,7 +20,7 @@ public class randSpawnManager : MonoBehaviour
             recipe[a] = spawnObj;
         }
 
-        print(recipe);
+       // print(recipe);
 
 
         /* foreach (GameObject spawn in spawnPoints)
