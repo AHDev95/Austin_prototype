@@ -12,6 +12,14 @@ public class randSpawnManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        spawnIn();
+
+      }       
+
+
+    public void spawnIn()
+    {
+
         spawnPoints = GameObject.FindGameObjectsWithTag("SpawnPoints");
         for (int a = 0; a < spawnPoints.Length; a++)
         {
@@ -20,26 +28,14 @@ public class randSpawnManager : MonoBehaviour
             recipe[a] = spawnObj;
         }
 
-       // print(recipe);
-
-
-        /* foreach (GameObject spawn in spawnPoints)
-         {
-
-             //spawnObj.GetComponent<onClick>().identity = i;
 
 
 
-             for (int i = 0; i>=3; i = i++)
-             {
-                 recipe[i] = spawnObj;
-
-             }*/
-
-      }       
 
 
 
+
+    }
 
     
 }

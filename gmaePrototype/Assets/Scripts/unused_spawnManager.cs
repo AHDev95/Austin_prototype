@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class spawnManager : MonoBehaviour
+public class unused_spawnManager : MonoBehaviour
 {
     GameObject[] selectSpawns;
     [SerializeField]

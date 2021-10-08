@@ -9,9 +9,15 @@ public class spawnStatic : MonoBehaviour
     void Start()
     {
 
-
-        Instantiate(prefab, transform);
+        spawnStat();
+        
 
     }
 
+    public void spawnStat()
+    {
+
+      Instantiate(prefab, transform);
+
+    }
 }
