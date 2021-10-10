@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-public class coutnDownClock : MonoBehaviour
+public class scoreClock : MonoBehaviour
 {
     float currentTime = 0f;
-    float startingTime = 20f;
+    float startingTime = 10f;
 
     [SerializeField] Text countDownText;
     private void Start()
