@@ -26,10 +26,10 @@ public class answerCheck : MonoBehaviour
         {
             for (int i = 0; i < answer.guess.Length; i++) {
                 // Debug.Log("count is three");
-                if (answer.guess[i].name == answerKey.recipe[i].name)  // == is checking if they are the same object in space
+                if (answer.guess[i].tag == answerKey.recipe[i].tag)  // == is checking if they are the same object in space
                 {
 
-                    if (answer.guess[2].name == answerKey.recipe[2].name)
+                    if (answer.guess[2].tag == answerKey.recipe[2].tag)
                     {
                         Debug.Log("correct answer");
                         answerKey.recipe[i] = null;
@@ -45,14 +45,6 @@ public class answerCheck : MonoBehaviour
                              return;
 
                         }
-
-
-
-
-
-                        
-
-
 
                     }
 
@@ -82,10 +74,10 @@ public class answerCheck : MonoBehaviour
         
         
         }
-                          /*
+                          
 
               
-                             */
+                           /*  */
 
     }
 
