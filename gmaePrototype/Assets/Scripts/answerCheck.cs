@@ -22,53 +22,87 @@ public class answerCheck : MonoBehaviour
     {
         
 
-       if (answer.count == 3) 
+       if (answer.count == 3) //when you have click 3 objects it will run the for loop
         {
-            for (int i = 0; i < answer.guess.Length; i++) {
-                // Debug.Log("count is three");
-                if (answer.guess[i].tag == answerKey.recipe[i].tag)  // == is checking if they are the same object in space
-                {
-
-                    if (answer.guess[2].tag == answerKey.recipe[2].tag)
+           
+                    if (answer.guess[0].tag == answerKey.recipe[0].tag)//the tag of item 0 of the guess array is == the tag of item 0 of the recipe arrray
                     {
-                        Debug.Log("correct answer");
-                        answerKey.recipe[i] = null;
-                        //WaitForSeconds(2);
-                        answerKey.spawnIn();
-                        for (int a = 0; a < answer.guess.Length; a++)
-                        {
-
-                            answer.guess[a] = null;
-                            answer.count = 0;
-
-
-                             return;
-
-                        }
-
+                        Debug.Log(" 000 correct answer");
+                       Destroy(answerKey.recipe[0]);
+                   
+                            answer.guess[0] = null;
+                     
                     }
-
-
-                     else
+                  else
                   {
-                      Debug.Log("wrong answer");
+                      Debug.Log(" 000 wrong answer");
                         answer.guess[0] = null;
                         answer.guess[1] = null;
                         answer.guess[2] = null;
                         answer.count = 0;
-
+                        Destroy(answerKey.recipe[0]);
+                        Destroy(answerKey.recipe[1]);
+                        Destroy(answerKey.recipe[2]);
+                        answerKey.spawnIn();
                         return;
-                    }   
-
-
-
-
-
-                   
-                }   
+                    }
                   
+                    //checking array item 1
+                     if (answer.guess[1].tag == answerKey.recipe[1].tag)//the tag of item 1 of the guess array is == the tag of item 1 of  the recipe arrray 
+                    {
+                         Debug.Log(" 001 correct answer");
+                        Destroy(answerKey.recipe[1]);
+                      
+                            answer.guess[1] = null;
+                       
+
+                     }
+                     else
+                     {
+                         Debug.Log(" 001 wrong answer");
+                         answer.guess[0] = null;
+                        answer.guess[1] = null;
+                        answer.guess[2] = null;
+                        answer.count = 0;
+                        
+                        Destroy(answerKey.recipe[1]);
+                        Destroy(answerKey.recipe[2]);
+                        answerKey.spawnIn();
+                        return;
+                    }
+
+
+                     //checking array item 2
+                     if (answer.guess[2].tag == answerKey.recipe[2].tag)//the tag of item 2 of the guess array is == the tag of item 2 of  the recipe arrray 
+                    {
+                         Debug.Log(" 002 correct answer");
+                        Destroy(answerKey.recipe[2]);
+                        
+                        answerKey.spawnIn();
+                        
+                            answer.guess[2] = null;
+                              answer.count = 0;
+                           
+                            return;
+
+                        
+
+                     }
+                     else
+                     {
+                         Debug.Log("002 wrong answer");
+                         answer.guess[0] = null;
+                        answer.guess[1] = null;
+                        answer.guess[2] = null;
+                        answer.count = 0;
+                       
+                        Destroy(answerKey.recipe[2]);
+                        answerKey.spawnIn();
+                        return;
+                    }   /**/
+
                     
-            }
+           
        
         
         
@@ -77,22 +111,8 @@ public class answerCheck : MonoBehaviour
                           
 
               
-                           /*  */
-
+                          
     }
-
-    
-
-   //public void RollOver()
-   // {
-        
-   // }
-
-
-
-
-
-
 
 
 }
