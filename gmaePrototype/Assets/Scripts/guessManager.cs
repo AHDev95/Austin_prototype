@@ -9,12 +9,15 @@ public class guessManager : MonoBehaviour
 
     private void Start()
     {
-        clearArray();
+       // clearArray();
     }
 
-    public void clearArray()
+   /* public void clearArray()
     {
+        for ( int i = 0; i < guess.Length; i++)
+        {
+            guess[i] = null;
+        }
 
-
-    }
+    }*/
 }

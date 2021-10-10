@@ -27,32 +27,80 @@ public class answerCheck : MonoBehaviour
             for (int i = 0; i < answer.guess.Length; i++) {
                 // Debug.Log("count is three");
                 if (answer.guess[i].name == answerKey.recipe[i].name)  // == is checking if they are the same object in space
-                {        
-                    
-                    if (answer.guess[2].name == answerKey.recipe[2].name) 
+                {
+
+                    if (answer.guess[2].name == answerKey.recipe[2].name)
                     {
-                         Debug.Log("correct answer");
-                         answerKey.spawnIn();
-                        
-                    //answer.clearArray();
-                   /* for ( int a = 0; a < answer.guess.Length; a++ )
-                    {
-                             
+                        Debug.Log("correct answer");
+                        answerKey.recipe[i] = null;
+                        //WaitForSeconds(2);
+                        answerKey.spawnIn();
+                        for (int a = 0; a < answer.guess.Length; a++)
+                        {
+
                             answer.guess[a] = null;
                             answer.count = 0;
-                    }*/
+
+
+                             return;
+
+                        }
+
+
+
+
+
+                        
+
 
 
                     }
-                  }   
-                  
-                  else
+
+
+                     else
                   {
                       Debug.Log("wrong answer");
+                        answer.guess[0] = null;
+                        answer.guess[1] = null;
+                        answer.guess[2] = null;
+                        answer.count = 0;
 
-                  }      
+                        return;
+                    }   
+
+
+
+
+
+                   
+                }   
+                  
+                    
             }
+       
+        
+        
+        
         }
+                          /*
+
+              
+                             */
 
     }
+
+    
+
+   //public void RollOver()
+   // {
+        
+   // }
+
+
+
+
+
+
+
+
 }

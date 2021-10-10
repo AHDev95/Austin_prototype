@@ -21,18 +21,12 @@ public class randSpawnManager : MonoBehaviour
     {
 
         spawnPoints = GameObject.FindGameObjectsWithTag("SpawnPoints");
-        for (int a = 0; a < spawnPoints.Length; a++)
+        for (int i = 0; i < spawnPoints.Length; i++)
         {
-            GameObject spawnObj = Instantiate(objectPreFab[UnityEngine.Random.Range(0, 6)], spawnPoints[a].transform, false);
+            GameObject spawnObj = Instantiate(objectPreFab[UnityEngine.Random.Range(0, 6)], spawnPoints[i].transform, false);
 
-            recipe[a] = spawnObj;
+            recipe[i] = spawnObj;
         }
-
-
-
-
-
-
 
 
     }
