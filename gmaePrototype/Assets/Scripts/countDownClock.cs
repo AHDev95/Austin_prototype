@@ -4,24 +4,30 @@ using UnityEngine;
 using UnityEngine.UI;
 public class countDownClock : MonoBehaviour
 {
-    float currentTime = 0f;
-    float startingTime = 20f;
-
+    float currentTime = 0f; //as it says this represents the current time in the game
+    float startingTime = 20f;//this is how much time you have in the game
+    
     [SerializeField] Text countDownText;
     private void Start()
     {
-        currentTime = startingTime;
+        currentTime = startingTime; // this sets the current time to start at the startingtime value
+       
     }
 
     private void Update()
     {
-        currentTime -= 1 * Time.deltaTime;
-        countDownText.text = currentTime.ToString("0");
+        currentTime -= 1 * Time.deltaTime; //the current time will count down by seconds instead of by frames
+        countDownText.text = currentTime.ToString("0");//printing the count down to the Ui text
 
         if(currentTime <= 0)
         {
-            currentTime = 0;
+            currentTime = 0;//this if makes the count stop a 0 and not count down into the negative numbers
+            
+            
         }
+
+
+        
     }
 
 }

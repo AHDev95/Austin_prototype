@@ -4,28 +4,27 @@ using UnityEngine;
 
 public class randSpawnManager : MonoBehaviour
 {
-    GameObject[] spawnPoints;
+    GameObject[] spawnPoints; // array of the spawn points for the random objects
     [SerializeField]
-    GameObject[] objectPreFab;
-    public GameObject[] recipe;
-    //public int identity;
-    // Start is called before the first frame update
+    GameObject[] objectPreFab; // array that the random objects are chosen from
+    public GameObject[] recipe; // array of the randomly spawned objects
+    
     void Start()
     {
-        spawnIn();
+        spawnIn(); // calling the spawn method for the random objects at the start of the game
 
       }       
 
 
-    public void spawnIn()
+    public void spawnIn() // random spawn method
     {
 
-        spawnPoints = GameObject.FindGameObjectsWithTag("SpawnPoints");
+        spawnPoints = GameObject.FindGameObjectsWithTag("SpawnPoints"); // finding the spawn points by their tag
         for (int i = 0; i < spawnPoints.Length; i++)
         {
-            GameObject spawnObj = Instantiate(objectPreFab[UnityEngine.Random.Range(0, 6)], spawnPoints[i].transform, false);
+            GameObject spawnObj = Instantiate(objectPreFab[UnityEngine.Random.Range(0, 6)], spawnPoints[i].transform, false); // instantiating (spawning)the random objects
 
-            recipe[i] = spawnObj;
+            recipe[i] = spawnObj; //filling an array with the random objects to be compaired to the select object later
         }
 
 
