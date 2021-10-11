@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class countDownClock : MonoBehaviour
 {
     float currentTime = 0f; //as it says this represents the current time in the game
-    float startingTime = 20f;//this is how much time you have in the game
+    float startingTime = 30f;//this is how much time you have in the game
     
     [SerializeField] Text countDownText;
     private void Start()
